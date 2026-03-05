@@ -1,0 +1,69 @@
+audio_params: 
+  n_channel: 3
+  n_speaker: 3
+  sample_rate: 16000
+  stft_length: 512
+  stft_shift: 256
+
+data_params: 
+  corpus_params: 
+    cache_path: null
+    audio_time: 5.0
+    version: 460
+  acoustic_params:
+    room: 
+      size: [[4.0, 4.0, 2.2], [8.0, 8.0, 3.5]]
+      t60: [0.2, 0.5]
+    speaker: 
+      array_dist: [0.5, 2.0]
+      height: [1.6, 0.08]
+      wall_dist: 0.5
+      spk_az_dist: 15
+    array:
+      type: 'circular'
+      radius: 0.05
+      height: [1.5, 0.02]
+      rel_pos: [0.4, 0.6]
+      wall_dist: 1.0
+    motion_params:
+      driving_force: 
+        driving_dist: 0.5
+        vel: [1.34, 0.26]
+        vel_max: 1.72
+        vel_relax_t: 1.0 
+      repulsive_force:
+        wall_potential_B: 0.2
+        array_potential_B: 0.2
+        spk_potential_A: 2.1
+        spk_potential_B: 0.3
+        spk_stride_t: 2.0
+  noise_params:
+    n_points: 64
+    snr_range: [20, 30]
+
+exp_params:
+  ref_channel: 0
+  cond_arange_params: [[-90, 90, 2], [-180, 180, 2]]
+  enhancement_type: 'miso'
+  optim_params:
+    lr: 0.001
+    scheduler_type: 'StepLR'
+    scheduler_params:
+      gamma: 0.75
+      step_size: 50
+  loss_params:
+    loss_type: teschL1
+    loss_alpha: 10
+
+logging_params:
+  n_batch: 3
+  n_samples: 1
+  logging_interval: 10
+  metric_params: {}
+
+train_params:
+  batch_size: 1
+  n_workers: 0
+  devices: 1
+  strategy: ddp
+  accelerator: gpu

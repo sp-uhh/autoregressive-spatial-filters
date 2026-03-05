@@ -1,0 +1,22 @@
+# python cache and installation builds
+**/__pycache__/
+**/*.pyc
+*.egg-info
+
+# images, audio and binaries (but not the .gif)
+**/*.wav
+**/*.png
+**/*.pdf
+**/*.mp4
+**/*.pkl
+**/*.svg
+
+# jupyter notebooks
+**/.ipynb_checkpoints/*
+
+# checkpoints
+**/*.ckpt
+**/ckpts/*
+
+# demo page misc
+# **/demo_page/data
