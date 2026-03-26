@@ -1,6 +1,6 @@
 ## Autoregressive Guidance of Deep Spatially Selective Filters using Bayesian Tracking for Efficient Extraction of Moving Speakers
 
-This page act as supplementary material to our work on *Autoregressive Guidance of Deep Spatially Selective Filters using Bayesian Tracking for Efficient Extraction of Moving Speakers* [1]. Open the [Demo Page](https://sp-uhh.github.io/autoregressive-spatial-filters/) for audio and video examples.
+This repository acts as supplementary material to our work on *Autoregressive Guidance of Deep Spatially Selective Filters using Bayesian Tracking for Efficient Extraction of Moving Speakers* [1]. Audio and video examples can be found on our [Demo Page](https://sp-uhh.github.io/autoregressive-spatial-filters/).
 
 ### Social Force Motion Model
 
